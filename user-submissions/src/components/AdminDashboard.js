@@ -6,7 +6,7 @@ const AdminDashboard = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    // Function to fetch submissions
+    
     const fetchSubmissions = async () => {
         try {
             const response = await axios.get('http://localhost:5000/submissions');
@@ -18,15 +18,15 @@ const AdminDashboard = () => {
         }
     };
 
-    // Fetch submissions on mount and set up interval for live updates
+    
     useEffect(() => {
         fetchSubmissions();
         
         const interval = setInterval(() => {
-            fetchSubmissions(); // Fetch submissions every 5 seconds
+            fetchSubmissions(); 
         }, 5000);
 
-        return () => clearInterval(interval); // Cleanup interval on unmount
+        return () => clearInterval(interval); 
     }, []);
 
     if (loading) {

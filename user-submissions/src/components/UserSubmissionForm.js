@@ -7,17 +7,17 @@ const UserSubmissionForm = () => {
     const [images, setImages] = useState([]);
 
     const handleFileChange = (e) => {
-        setImages(e.target.files); // Get the selected files
+        setImages(e.target.files); 
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault(); // Prevent default form submission
+        e.preventDefault(); 
 
         const formData = new FormData();
         formData.append('name', name);
         formData.append('socialMediaHandle', socialMediaHandle);
 
-        // Append each image file to FormData
+       
         Array.from(images).forEach((image) => {
             formData.append('images', image);
         });
@@ -29,7 +29,7 @@ const UserSubmissionForm = () => {
                 },
             });
             console.log('Submission successful:', response.data);
-            // Clear the form after successful submission
+            
             setName('');
             setSocialMediaHandle('');
             setImages([]);
