@@ -4,32 +4,33 @@ import axios from 'axios';
 const UserSubmissionForm = () => {
     const [name, setName] = useState('');
     const [socialMediaHandle, setSocialMediaHandle] = useState('');
-    const [images, setImages] = useState([]);
+    const [images, setImages] = useState([]); // State for selected images
 
+    // This function will be triggered when the user selects images
     const handleFileChange = (e) => {
-        setImages(e.target.files); 
+        setImages(e.target.files); // Store the selected files in state
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault(); 
+        e.preventDefault(); // Prevent default form submission
 
         const formData = new FormData();
         formData.append('name', name);
         formData.append('socialMediaHandle', socialMediaHandle);
 
-       
+        // Append each image file to FormData
         Array.from(images).forEach((image) => {
             formData.append('images', image);
         });
 
         try {
-            const response = await axios.post('http://localhost:5000/submissions', formData, {
+            const response = await axios.post('https://backend-lemon-alpha.vercel.app/', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
             });
             console.log('Submission successful:', response.data);
-            
+         
             setName('');
             setSocialMediaHandle('');
             setImages([]);
@@ -65,7 +66,7 @@ const UserSubmissionForm = () => {
                     <input
                         type="file"
                         multiple
-                        onChange={handleFileChange}
+                        onChange={handleFileChange} 
                         required
                     />
                 </div>
