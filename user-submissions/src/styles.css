@@ -1,0 +1,125 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Form container */
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+form input[type="text"], 
+form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #4cae4c;
+}
+
+/* Dashboard styles */
+.dashboard-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.dashboard-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.submission-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.submission-card h3 {
+    margin: 0;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.submission-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submission-images {
+    display: flex;
+    gap: 10px;
+}
+
+.submissions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.image-thumbnail {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.thumbnail {
+    width: 80px; /* Thumbnail width */
+    height: 80px; /* Thumbnail height */
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 10px;
+}
