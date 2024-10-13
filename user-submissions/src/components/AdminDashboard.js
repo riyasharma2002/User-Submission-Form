@@ -7,7 +7,7 @@ const AdminDashboard = () => {
     useEffect(() => {
         const fetchSubmissions = async () => {
             try {
-                const response = await axios.get('https://backend-lemon-alpha.vercel.app/');
+                const response = await axios.get('https://backend-mivkgqd2h-riya-sharmas-projects-58bc816f.vercel.app/');
                 setSubmissions(response.data);
             } catch (error) {
                 console.error('Error fetching submissions:', error);
